@@ -1,1 +1,6 @@
-https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
+
+![Python](https://img.shields.io/badge/language-Python-blue)
+
+![Linux](https://img.shields.io/badge/platform-Linux-green)
+
+![MIT License](https://img.shields.io/badge/license-MIT-red)
