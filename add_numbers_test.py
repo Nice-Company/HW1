@@ -1,10 +1,5 @@
-def factorial(num1):
-    if num1 <= 1:
-        return 1
-    return factorial(num1 - 1) * num1
+import add_numbers as an
 
-num1 = 5
+assert an.add_numbers(5, 2) == 7
 
-fact = factorials(num1)
-
-print("factorial of 5:", fact)
+assert an.add_numbers(5, 4) == 6
