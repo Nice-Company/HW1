@@ -5,4 +5,4 @@
 
 ![MIT License](https://img.shields.io/badge/license-MIT-red)
 
-[![Python application](https://github.com/Nice-Company/HW1/actions/workflows/python-app.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/python-app.yml)
+[![Build Status](https://github.com/Nice-Company/HW1/actions/workflows/python-app.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/python-app.yml)
