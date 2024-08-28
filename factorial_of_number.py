@@ -5,6 +5,6 @@ def factorial(num1):
 
 num1 = 5
 
-fact = factorials(num1)
+fact = factorial(num1)
 
 print("factorial of 5:", fact)
