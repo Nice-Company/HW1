@@ -15,18 +15,18 @@ def recombine(leftArr, rightArr):
     rightIndex = 0
     mergeArr = [None] * (len(leftArr) + len(rightArr))
     while leftIndex < len(leftArr) and rightIndex < len(rightArr):
-        if leftArr[leftIndex] < rightArr[rightIndex]:
-            rightIndex += 1
+        if leftArr[leftIndex] <= rightArr[rightIndex]:
             mergeArr[leftIndex + rightIndex] = leftArr[leftIndex]
-        else:
             leftIndex += 1
+        else:
             mergeArr[leftIndex + rightIndex] = rightArr[rightIndex]
+            rightIndex += 1
 
     for i in range(rightIndex, len(rightArr)):
-        mergeArr[leftIndex + rightIndex] = rightArr[i]
+        mergeArr[leftIndex + i] = rightArr[i]
 
     for i in range(leftIndex, len(leftArr)):
-        mergeArr[leftIndex + rightIndex] = leftArr[i]
+        mergeArr[i + rightIndex] = leftArr[i]
 
     return mergeArr
 
