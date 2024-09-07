@@ -21,13 +21,13 @@ jobs:
           pip install autopep8 pylint flake8 pytest # Or unittest if you use it
 
       - name: Run autopep8
-        run: autopep8 --in-place merge_sort.py  # Format only merge_sort.py
+        run: autopep8 --in-place merge_sort_test.py  # Format only merge_sort.py
 
       - name: Run pylint
-        run: pylint merge_sort.py  # Analyze only merge_sort.py
+        run: pylint merge_sort_test.py  # Analyze only merge_sort.py
 
       - name: Run flake8
-        run: flake8 merge_sort.py  # Analyze only merge_sort.py
+        run: flake8 merge_sort_test.py  # Analyze only merge_sort.py
 
       - name: Run tests
         run: |
