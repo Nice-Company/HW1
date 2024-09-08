@@ -1,4 +1,4 @@
-name: Lint with pylint
+name: Lint with autopep8
 
 on:
   push:
@@ -23,9 +23,9 @@ jobs:
       run: |
         python3 -B --version
         python -m pip install --upgrade pip
-        pip install --upgrade pylint
+        pip install --upgrade autopep8
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Lint with pylint
+    - name: Lint with autopep8
       run: |
-        pylint $(git ls-files '*.py')
+        autopep8 --diff --exit-code --recursive . 
