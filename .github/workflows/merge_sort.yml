@@ -25,4 +25,4 @@ jobs:
 
       - name: Run merge_sort test
         run: |
-          pytest test_merge_sort.py        # Run your merge_sort test file using pytest
+          pytest merge_sort_test.py        # Run your merge_sort test file using pytest
