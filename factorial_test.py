@@ -12,4 +12,3 @@ def test_factorial_of_four():
     Testing the value of factorial for number 10.
     """
     assert factorial(4) == 24
-
