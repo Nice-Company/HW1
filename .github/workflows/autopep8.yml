@@ -3,6 +3,8 @@ name: Lint with autopep8
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ] # Run tests on every pull request to the main branch  
 
 permissions:
   contents: read
@@ -28,4 +30,4 @@ jobs:
 
     - name: Lint with autopep8
       run: |
-        autopep8 --diff --exit-code --recursive . 
+        autopep8 --diff --exit-code --recursive . # running for all the files in the repo 

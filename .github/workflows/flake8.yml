@@ -28,4 +28,4 @@ jobs:
 
     - name: Lint with flake8
       run: |
-        flake8 .
+        flake8 . # running for all the files in the repo

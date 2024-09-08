@@ -7,8 +7,10 @@
 
 [![Build Status](https://github.com/Nice-Company/HW1/actions/workflows/python-app.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/python-app.yml)
 
-![Pyflakes](https://github.com/Nice-Company/HW1/actions/workflows/flake8.yml/badge.svg)
+[![Pyflakes](https://github.com/Nice-Company/HW1/actions/workflows/flake8.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/flake8.yml)
 
-![PyLint](https://github.com/Nice-Company/HW1/actions/workflows/pylint.yml/badge.svg)
+[![PyLint](https://github.com/Nice-Company/HW1/actions/workflows/pylint.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/pylint.yml)
 
-![Autopep](https://github.com/Nice-Company/HW1/actions/workflows/autopep8.yml/badge.svg)
+[![Autopep](https://github.com/Nice-Company/HW1/actions/workflows/autopep8.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/autopep8.yml)
+
+[![Merge Sort](https://github.com/Nice-Company/HW1/actions/workflows/merge_sort.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/merge_sort.yml)

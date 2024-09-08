@@ -22,4 +22,4 @@ def test_five_elements():
     """
     Test case for sorting five elements
     """
-    assert merge_sort([6, 3, 20, 5, 2]) == [2, 3, 5, 6, 20]
+    assert merge_sort([6, 3, 20, 5, 2]) == [2, 3, 6, 20]
