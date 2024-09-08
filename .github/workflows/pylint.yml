@@ -1,11 +1,11 @@
-name: Configure code
+name: lint with pylint
 
 on:
   push:
     branches: [ "main" ]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -23,9 +23,9 @@ jobs:
       run: |
         python3 -B --version
         python -m pip install --upgrade pip
-        pip install --upgrade flake8 autopep8
+        pip install --upgrade pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Lint with flake8
       run: |
-        flake8 .
+        pylint .
