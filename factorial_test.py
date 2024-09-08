@@ -1,4 +1,9 @@
+"""
+This module contains tests for factorial_of_number.py
+"""
+
 from factorial_of_number import factorial
+
 
 def test_factorial_of_five():
     """
