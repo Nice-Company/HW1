@@ -21,7 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt  # Install necessary dependencies
+          pip install pytest
+          if [ -f requirements.txt ]; pip install -r requirements.txt  # Install necessary dependencies
 
       - name: Run merge_sort test
         run: |
