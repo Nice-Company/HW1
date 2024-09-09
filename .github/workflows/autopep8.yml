@@ -32,8 +32,8 @@ jobs:
       run: mkdir -p post_traces
 
     - name: Lint with autopep8
+      id: lint
       run: autopep8 --diff --exit-code --recursive . > post_traces/autopep8_trace.txt # running for all the files in the repo
-      continue-on-error: true
 
     - name: Commit and save the file
       run: |
@@ -45,3 +45,8 @@ jobs:
           git commit -m "Saving autopep8 trace"
           git pull --rebase
           git push origin HEAD:main; fi
+      continue-on-error: true
+
+    - name: Fail if lint fails
+      if: steps.lint.outcome == 'failure'
+      run: exit 1
