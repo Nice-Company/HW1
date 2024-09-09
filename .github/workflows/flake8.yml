@@ -29,16 +29,10 @@ jobs:
     - name: Lint with pyflakes
       run: |
         flake8 . > post_traces/pyflakes_trace.txt # running for all the files in the repo
-      continue-on-error: true # This is for when this step fails because of checkstyle error and we still want to move on to next step to push the post_trace changes to main
-
-    - name: Add and commit pyflakes trace
-      run: |
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
         git add .
         git commit -m "Saving pyflakes trace"
-        
-    - name: Push changes to main
-      run: git push origin HEAD:main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
