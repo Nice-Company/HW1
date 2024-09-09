@@ -28,6 +28,22 @@ jobs:
         pip install --upgrade autopep8
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Create post traces directory
+      run: mkdir -p post_traces
+
     - name: Lint with autopep8
       run: |
-        autopep8 --diff --exit-code --recursive . # running for all the files in the repo 
+        autopep8 --diff --exit-code --recursive . > post_traces/autopep8_trace.txt # running for all the files in the repo
+      continue-on-error: true
+
+    - name: Add and commit autopep8 trace
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "github-actions"
+        git add .
+        git commit -m "Saving autopep8 trace"
+    
+    - name: Push changes to main
+      run: git push origin HEAD:main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
