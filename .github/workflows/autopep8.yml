@@ -1,10 +1,10 @@
 name: Lint with autopep8
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ] # Run tests on every pull request to the main branch  
+  workflow_run:
+    workflows: ["Lint with flake8"]
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -38,7 +38,7 @@ jobs:
 
     - name: Add and commit autopep8 trace
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
         git add .
         git commit -m "Saving autopep8 trace"

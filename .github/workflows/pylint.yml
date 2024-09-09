@@ -1,8 +1,10 @@
 name: Lint with pylint
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_run:
+    workflows: ["Lint with autopep8"]
+    types:
+      - completed
 
 permissions:
   contents: read

@@ -42,5 +42,3 @@ jobs:
       run: git push origin HEAD:main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  
