@@ -31,7 +31,8 @@ jobs:
         flake8 . > post_traces/pyflakes_trace.txt # running for all the files in the repo
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
-        git add .
-        git commit -m "Saving pyflakes trace"
-        git pull --rebase
-        git push origin HEAD:main
+        if [ -n "$(git status --porcelain)" ]; then
+          # Commit and push changes
+          git add .
+          git commit -m "Saving pyflakes trace"
+          git push origin HEAD:main; fi

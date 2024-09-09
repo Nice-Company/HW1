@@ -34,9 +34,8 @@ jobs:
     - name: Lint with autopep8
       run: |
         autopep8 --diff --exit-code --recursive . > post_traces/autopep8_trace.txt # running for all the files in the repo
-        git config --local user.email "action@github.com"
-        git config --local user.name "github-actions"
-        git add .
-        git commit -m "Saving autopep8 trace"
-        git pull --rebase
-        git push origin HEAD:main
+        if [ -n "$(git status --porcelain)" ]; then
+          # Commit and push changes
+          git add .
+          git commit -m "Saving pyflakes trace"
+          git push origin HEAD:main; fi
