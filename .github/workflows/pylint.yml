@@ -34,6 +34,7 @@ jobs:
     - name: Lint with pylint
       id: lint
       run: pylint $(git ls-files '*.py') > post_traces/pylint_trace.txt # running for all the files in the repo
+      continue-on-error: true
 
     - name: Commit and save the file
       run: |
@@ -45,7 +46,6 @@ jobs:
           git commit -m "Saving pylint trace"
           git pull --rebase
           git push origin HEAD:main; fi
-      continue-on-error: true
 
     - name: Fail if lint fails
       if: steps.lint.outcome == 'failure'

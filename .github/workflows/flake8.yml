@@ -29,6 +29,7 @@ jobs:
     - name: Lint with pyflakes
       id: lint
       run: flake8 . > post_traces/pyflakes_trace.txt # running for all the files in the repo
+      continue-on-error: true
 
     - name: Commit and save the file
       run: |
@@ -40,7 +41,6 @@ jobs:
           git commit -m "Saving pyflakes trace"
           git pull --rebase
           git push origin HEAD:main; fi
-      continue-on-error: true
 
     - name: Fail if lint fails
       if: steps.lint.outcome == 'failure'
