@@ -26,6 +26,15 @@ jobs:
         pip install --upgrade pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Create post traces directory
+      run: mkdir -p post_traces
+
     - name: Lint with pylint
       run: |
-        pylint $(git ls-files '*.py') # running for all the files in the repo
+        pylint $(git ls-files '*.py') > post_traces/pylint_trace.txt # running for all the files in the repo
+
+    - name: Upload pylint trace artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: pylint-trace
+        path: post_traces/pylint_trace.txt
