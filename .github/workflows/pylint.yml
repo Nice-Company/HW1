@@ -42,8 +42,8 @@ jobs:
 
     - name: Commit and save the file
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions"
+        git config --local user.email "salway.hrishikesh@gmail.com"
+        git config --local user.name "hsalway1"
         if [ -n "$(git status --porcelain)" ]; then
           # Commit and push changes
           git add .
