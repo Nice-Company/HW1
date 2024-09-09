@@ -36,8 +36,12 @@ jobs:
 
     - name: Add and commit pylint trace
       run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "github-actions"
         git add .
         git commit -m "Saving pylint trace"
     
     - name: Push changes to main
-      run: git push origin HEAD:main
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
