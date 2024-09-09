@@ -1,1 +1,2 @@
+./factorial_test.py:26:29: W292 no newline at end of file
 ./hw2_debugging.py:57:15: W292 no newline at end of file
