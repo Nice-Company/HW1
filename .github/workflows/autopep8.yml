@@ -39,5 +39,3 @@ jobs:
         git add .
         git commit -m "Saving autopep8 trace"
         git push origin HEAD:main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
