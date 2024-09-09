@@ -27,9 +27,8 @@ jobs:
       run: mkdir -p post_traces
 
     - name: Lint with pyflakes
-      run: |
-        flake8 . > post_traces/pyflakes_trace.txt # running for all the files in the repo
-        continue-on-error: true
+      run: flake8 . > post_traces/pyflakes_trace.txt # running for all the files in the repo
+      continue-on-error: true
 
     - name: Commit and save the file
       run: |
