@@ -40,4 +40,5 @@ jobs:
           # Commit and push changes
           git add .
           git commit -m "Saving pyflakes trace"
+          git pull --rebase
           git push origin HEAD:main; fi
