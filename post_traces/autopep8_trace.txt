@@ -1,0 +1,9 @@
+--- original/./hw2_debugging.py
++++ fixed/./hw2_debugging.py
+@@ -54,4 +54,4 @@
+ input_arr = rand.random_array([None] * 20)
+ arr_out = merge_sort(input_arr)
+ 
+-print(arr_out)
+\ No newline at end of file
++print(arr_out)
