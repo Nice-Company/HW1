@@ -33,8 +33,10 @@ jobs:
       run: |
         pylint $(git ls-files '*.py') > post_traces/pylint_trace.txt # running for all the files in the repo
 
-    - name: Upload pylint trace artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: pylint-trace
-        path: post_traces/pylint_trace.txt
+    - name: Add and commit pylint trace
+      run: |
+        git add .
+        git commit -m "Saving pylint trace"
+    
+    - name: Push changes to main
+      run: git push origin HEAD:main
