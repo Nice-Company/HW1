@@ -29,6 +29,10 @@ jobs:
     - name: Lint with pyflakes
       run: |
         flake8 . > post_traces/pyflakes_trace.txt # running for all the files in the repo
+        continue-on-error: true
+
+    - name: Commit and save the file
+      run: |
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
         if [ -n "$(git status --porcelain)" ]; then

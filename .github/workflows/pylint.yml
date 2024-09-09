@@ -32,13 +32,16 @@ jobs:
       run: mkdir -p post_traces
 
     - name: Lint with pylint
+      run: pylint $(git ls-files '*.py') > post_traces/pylint_trace.txt # running for all the files in the repo
+      continue-on-error: true
+
+    - name: Commit and save the file
       run: |
-        pylint $(git ls-files '*.py') > post_traces/pylint_trace.txt # running for all the files in the repo
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
         if [ -n "$(git status --porcelain)" ]; then
           # Commit and push changes
           git add .
-          git commit -m "Saving pyflakes trace"
+          git commit -m "Saving pylint trace"
           git pull --rebase
           git push origin HEAD:main; fi
