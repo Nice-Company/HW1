@@ -38,4 +38,5 @@ jobs:
         git config --local user.name "github-actions"
         git add .
         git commit -m "Saving pylint trace"
+        git pull --rebase
         git push origin HEAD:main
