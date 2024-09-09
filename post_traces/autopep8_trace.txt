@@ -1,3 +1,12 @@
+--- original/./factorial_test.py
++++ fixed/./factorial_test.py
+@@ -23,4 +23,4 @@
+     """
+     Test case for factorial of zero. It is kept failing intentionally.
+     """
+-    assert factorial(0) == 0
+\ No newline at end of file
++    assert factorial(0) == 0
 --- original/./hw2_debugging.py
 +++ fixed/./hw2_debugging.py
 @@ -54,4 +54,4 @@
