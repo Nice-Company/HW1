@@ -1,8 +1,4 @@
-************* Module factorial_test
-factorial_test.py:26:0: C0304: Final newline missing (missing-final-newline)
-************* Module hw2_debugging
-hw2_debugging.py:57:0: C0304: Final newline missing (missing-final-newline)
 
------------------------------------
-Your code has been rated at 9.63/10
+------------------------------------
+Your code has been rated at 10.00/10
 
