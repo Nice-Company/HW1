@@ -1,0 +1,3 @@
+Pyflakes and Autopep8 does not give any output or message if the code is in accorance with their rules.
+
+Pylint gives us the rating of the code.
