@@ -2,7 +2,6 @@
 This module contains a method for calculating the factorial of a number.
 """
 
-
 def factorial(num1):
     """
     A method to get the factorial of a number.

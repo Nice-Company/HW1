@@ -29,7 +29,7 @@ jobs:
     - name: Lint with pyflakes
       id: lint
       run: flake8 . > post_traces/pyflakes_trace.txt # running for all the files in the repo
-      continue-on-error: true
+      continue-on-error: true # continue the execution even if there's a checkstyle error because we want to store the analysis trace in a txt file and push it to main in the next step.
 
     - name: Commit and save the file
       run: |
@@ -44,4 +44,4 @@ jobs:
 
     - name: Fail if lint fails
       if: steps.lint.outcome == 'failure'
-      run: exit 1
+      run: exit 1 # fail the execution if "Lint with pyflakes" step comes across a check style error.
