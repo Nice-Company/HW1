@@ -1,0 +1,10 @@
+--- original/./factorial_of_number.py
++++ fixed/./factorial_of_number.py
+@@ -1,6 +1,7 @@
+ """
+ This module contains a method for calculating the factorial of a number.
+ """
++
+ 
+ def factorial(num1):
+     """
