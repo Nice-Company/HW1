@@ -30,8 +30,8 @@ jobs:
       id: lint
       run: |
         radon raw . > post_traces/radon_raw.txt # running for all the files in the repo
-        radon mi . > random_mi_report.txt
-        radon cc . -s > radon_cc_report.txt
+        radon mi . > post_traces/random_mi_report.txt
+        radon cc . -s > post_traces/radon_cc_report.txt
       continue-on-error: true # continue the execution even if there's a checkstyle error because we want to store the analysis trace in a txt file and push it to main in the next step.
 
     - name: Commit and save the file

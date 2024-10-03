@@ -13,4 +13,8 @@
 
 [![Autopep](https://github.com/Nice-Company/HW1/actions/workflows/autopep8.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/autopep8.yml)
 
+[![Bandit](https://github.com/Nice-Company/HW1/actions/workflows/bandit.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/bandit.yml)
+
+[![Radon](https://github.com/Nice-Company/HW1/actions/workflows/radon.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/radon.yml)
+
 [![Merge Sort](https://github.com/Nice-Company/HW1/actions/workflows/merge_sort.yml/badge.svg)](https://github.com/Nice-Company/HW1/actions/workflows/merge_sort.yml)
