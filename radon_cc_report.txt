@@ -1,0 +1,16 @@
+factorial_test.py
+    F 8:0 test_factorial_of_five - A (2)
+    F 15:0 test_factorial_of_four - A (2)
+    F 22:0 test_factorial_of_zero - A (2)
+merge_sort_test.py
+    F 7:0 test_no_elements - A (2)
+    F 14:0 test_one_element - A (2)
+    F 21:0 test_five_elements - A (2)
+    F 28:0 test_eight_elements - A (2)
+rand.py
+    F 7:0 random_array - A (2)
+hw2_debugging.py
+    F 23:0 recombine - B (6)
+    F 7:0 merge_sort - A (2)
+factorial_of_number.py
+    F 6:0 factorial - A (2)
