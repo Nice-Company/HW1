@@ -1,15 +1,3 @@
-factorial_test.py
-    LOC: 26
-    LLOC: 11
-    SLOC: 7
-    Comments: 0
-    Single comments: 0
-    Multi: 12
-    Blank: 7
-    - Comment Stats
-        (C % L): 0%
-        (C % S): 0%
-        (C + M % L): 46%
 merge_sort_test.py
     LOC: 32
     LLOC: 14
@@ -22,30 +10,6 @@ merge_sort_test.py
         (C % L): 0%
         (C % S): 0%
         (C + M % L): 47%
-rand.py
-    LOC: 20
-    LLOC: 9
-    SLOC: 8
-    Comments: 0
-    Single comments: 0
-    Multi: 10
-    Blank: 2
-    - Comment Stats
-        (C % L): 0%
-        (C % S): 0%
-        (C + M % L): 50%
-hw2_debugging.py
-    LOC: 57
-    LLOC: 29
-    SLOC: 25
-    Comments: 0
-    Single comments: 0
-    Multi: 18
-    Blank: 14
-    - Comment Stats
-        (C % L): 0%
-        (C % S): 0%
-        (C + M % L): 32%
 factorial_of_number.py
     LOC: 19
     LLOC: 9
@@ -58,3 +22,39 @@ factorial_of_number.py
         (C % L): 0%
         (C % S): 0%
         (C + M % L): 32%
+hw2_debugging.py
+    LOC: 57
+    LLOC: 29
+    SLOC: 25
+    Comments: 0
+    Single comments: 0
+    Multi: 18
+    Blank: 14
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 32%
+factorial_test.py
+    LOC: 26
+    LLOC: 11
+    SLOC: 7
+    Comments: 0
+    Single comments: 0
+    Multi: 12
+    Blank: 7
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 46%
+rand.py
+    LOC: 20
+    LLOC: 9
+    SLOC: 8
+    Comments: 0
+    Single comments: 0
+    Multi: 10
+    Blank: 2
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 50%
