@@ -1,0 +1,1 @@
+grep -l "sample" ./dataset1/* | xargs -I {} sh -c 'if [ $(sort "{}" | uniq | grep -o "CSC510" {} | wc -l) -ge 3 ]; then echo "{}"; fi' | xargs -I {} sh -c 'echo "$(grep -o "CSC510" "{}" | wc -l) {}"' | gawk '$1 >= 3 {print $2}' | sed 's|:CSC510||' | xargs -d '\n' du -b | sort -k1,1nr | gawk '{print $2}' | sed 's|file|filtered|g'
